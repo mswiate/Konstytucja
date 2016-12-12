@@ -1,30 +1,33 @@
 package edu.mswiate.konstytucja;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Chapter implements Section {
 	
 	private String chapterNumber;
 	private String chapterName;
-	private Constitution constitution;
 	
-	private int firstArticle;
-	private int lastArticle;
+	//zawiera obiekty klas Article i Point (podrozdzia³y)
+	private final List<Section> sections = new ArrayList<Section>();
 	
-	public Chapter(String chapterNumber, String chapterName, Constitution constitution, int firstArticle, int lastArticle){
+	public Chapter(String chapterNumber, String chapterName){
 		this.chapterName = chapterName;
 		this.chapterNumber = chapterNumber;
-		this.constitution = constitution;
-		this.firstArticle = firstArticle;
-		this.lastArticle = lastArticle;
 	}
 	
+	public void addSection(Section section){
+		sections.add(section);
+	}
 	
 	@Override
-	public void show() {
-		System.out.println("Rozdzia³ " + chapterNumber);
-		System.out.println(chapterName);
-		for(int i = firstArticle; i < lastArticle; ++i){
-			constitution.getArticle(i).show();
-		}		
+	public String toString() {
+		StringBuilder contents = new StringBuilder("Rozdzia³ " + chapterNumber + "\n" + chapterName + "\n") ;
+		for(Section section : sections){
+			contents.append(section.toString());
+		}
+		return contents.toString();
+		
 	}
 
 	

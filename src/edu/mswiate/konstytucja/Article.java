@@ -6,25 +6,24 @@ import java.util.List;
 public class Article implements Section {
 	
 	private int articleNumber;
-	private Constitution constitution;
 	
 	private final List<Point> points = new ArrayList<Point>();
 	
-	public Article(Constitution constitution, int articleNumber){
+	public Article(int articleNumber){
 		this.articleNumber = articleNumber;
-		this.constitution = constitution;
 	}
 	
 	public void addPoint(Point point){
-		
+		points.add(point);
 	}
 	
 	@Override
-	public void show() {
-		System.out.println("Art. " + articleNumber + "." );
+	public String toString() {
+		StringBuilder contents = new StringBuilder("Art. " + articleNumber + ".\n") ;
 		for(Point point:points){
-			point.show();
+			contents.append(point.toString());
 		}
+		return contents.toString();
 	}
 
 }

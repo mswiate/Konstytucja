@@ -8,21 +8,31 @@ public class Constitution {
 	private final List<Article> articles = new ArrayList<Article>();
 	private final List<Chapter> chapters = new ArrayList<Chapter>();
 	
-	Article getArticle(int articleNumber){
+	public Constitution(){
+		
+	}
+	
+	public Article getArticle(int articleNumber) {
+		if(articleNumber > articles.size())
+			throw new IndexOutOfBoundsException("There is no such article: " + articleNumber +
+												" in this Constitution ");
 		return articles.get(articleNumber - 1);
 	}
 	
-	Chapter getChapter(int ChapterNumber){
+	public Chapter getChapter(int chapterNumber) {
+		if( chapterNumber > chapters.size())
+			throw new IndexOutOfBoundsException("There is no such Chapter: " + chapterNumber +
+												" in this Constitution ");
 		return chapters.get(chapterNumber - 1);
 	}
 	
 	//dodaje rozdzia³
-	void addChapter(String chapterNumber, String chapterName, Constitution constitution, int firstArticle, int lastArticle){
-		chapters.add( new Chapter( chapterNumber, chapterName, this, firstArticle, lastArticle ) );
+	void addChapter(Chapter chapter){
+		chapters.add(chapter);
 	}
-	
+		
 	//dodaje artyku³
-	void addArticle(int articleNumber, List<Point> points){
-		articles.add(new Article (this, articleNumber, points));
+	void addArticle(Article article){
+		articles.add(article);
 	}
 }

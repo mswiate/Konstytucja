@@ -1,5 +1,11 @@
 package edu.mswiate.konstytucja;
 
+
+/*
+ * punkt- 
+ * nie ma rozroznienia dla:
+ * [0-9]) , [0-9]., normalna tresc, nazwa podrozdzialu 
+ */
 public class Point implements Section {
 	
 	private String contents;
@@ -9,8 +15,8 @@ public class Point implements Section {
 	}
 	
 	@Override
-	public void show() {
-		System.out.println(contents);
+	public String toString() {
+		return this.contents + '\n';
 	}
 	
 
