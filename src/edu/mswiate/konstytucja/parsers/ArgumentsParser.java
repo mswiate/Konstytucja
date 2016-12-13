@@ -1,8 +1,11 @@
-package edu.mswiate.konstytucja;
+package edu.mswiate.konstytucja.parsers;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+
+import edu.mswiate.konstytucja.Constitution;
+import edu.mswiate.konstytucja.sections.Section;
 
 public class ArgumentsParser {
 	

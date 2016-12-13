@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
+import edu.mswiate.konstytucja.parsers.ArgumentsParser;
+import edu.mswiate.konstytucja.parsers.TextParser;
+import edu.mswiate.konstytucja.sections.Section;
+
 public class Main {
 	
 	public static void main(String[] args) {

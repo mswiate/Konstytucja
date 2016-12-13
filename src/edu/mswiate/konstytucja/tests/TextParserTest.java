@@ -1,15 +1,19 @@
-package edu.mswiate.konstytucja;
+package edu.mswiate.konstytucja.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import edu.mswiate.konstytucja.Constitution;
+import edu.mswiate.konstytucja.parsers.ArgumentsParser;
+import edu.mswiate.konstytucja.parsers.TextParser;
 
 public class TextParserTest {
 
 	@Test
 	public void testParse() {
 		//ZMIENIC SCIEZKE DO PLIKU !!!
-		String[] args = {"sciezka","1","R2","240-243"};
+		String[] args = {"D:\\III semestr\\javaWorkspace\\konstytucja.txt","1","R2","240-243"};
 		Constitution c = new Constitution();
 		TextParser tp = new TextParser(c, new ArgumentsParser().parseFilePath(args));
 		try{

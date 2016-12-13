@@ -1,8 +1,10 @@
-package edu.mswiate.konstytucja;
+package edu.mswiate.konstytucja.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import edu.mswiate.konstytucja.sections.Point;
 
 public class PointTest {
 

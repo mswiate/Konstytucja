@@ -1,4 +1,4 @@
-package edu.mswiate.konstytucja;
+package edu.mswiate.konstytucja.sections;
 
 import java.util.ArrayList;
 import java.util.List;

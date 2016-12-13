@@ -3,6 +3,9 @@ package edu.mswiate.konstytucja;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.mswiate.konstytucja.sections.Article;
+import edu.mswiate.konstytucja.sections.Chapter;
+
 public class Constitution {
 	
 	private final List<Article> articles = new ArrayList<Article>();
@@ -27,12 +30,12 @@ public class Constitution {
 	}
 	
 	//dodaje rozdzia³
-	void addChapter(Chapter chapter){
+	public void addChapter(Chapter chapter){
 		chapters.add(chapter);
 	}
 		
 	//dodaje artyku³
-	void addArticle(Article article){
+	public void addArticle(Article article){
 		articles.add(article);
 	}
 }

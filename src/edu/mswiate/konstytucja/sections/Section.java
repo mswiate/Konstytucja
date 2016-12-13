@@ -1,4 +1,4 @@
-package edu.mswiate.konstytucja;
+package edu.mswiate.konstytucja.sections;
 
 /*
  * Sekcja konstytucji,
