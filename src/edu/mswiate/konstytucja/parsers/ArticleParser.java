@@ -13,7 +13,7 @@ public class ArticleParser implements Parser {
 	private PointParser pp;
 	
 	public ArticleParser(Constitution constitution){
-		pointStart = Pattern.compile("^[1-9]+[.)] .+$"); 
+		pointStart = Pattern.compile("^[0-9]+[.)] .+$"); 
 		pp = new PointParser();
 		this.constitution = constitution;
 	}
